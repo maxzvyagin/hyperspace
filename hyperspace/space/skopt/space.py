@@ -138,7 +138,8 @@ class HyperReal(HyperSpace, Real):
         - If overlap=1, two copies of the search space is made.
     """
     def __init__(self, low, high, prior="uniform", transform=None, overlap=0.25, name=None):
-        super().__init__(low, high, prior, transform)
+        #super().__init__(low, high, prior=prior, transform=transform, base=10)
+        super().__init__(low, high)
         self.prior = prior
         self.transform = transform
         self.overlap = overlap
@@ -181,8 +182,8 @@ class HyperReal(HyperSpace, Real):
         """
         Create integer HyperSpaces.
         """
-        return Real(self.space0_low, self.space0_high, self.prior, self.transform), \
-               Real(self.space1_low, self.space1_high, self.prior, self.transform)
+        return Real(self.space0_low, self.space0_high, prior=self.prior, transform=self.transform), \
+               Real(self.space1_low, self.space1_high, prior=self.prior, transform=self.transform)
 
 
 class HyperCategorical(HyperSpace, Categorical):

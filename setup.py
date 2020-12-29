@@ -11,7 +11,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='hyperspaces',
-    version="0.3.0",
+    version="0.5.0",
     packages=find_packages(),
     install_requires=['scikit-optimize', 'scikit-learn', 'mpi4py', 'cython', 'sphinxcontrib-bibtex'],
     author="Todd Young",
