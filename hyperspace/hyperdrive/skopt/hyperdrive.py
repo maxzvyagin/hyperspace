@@ -4,7 +4,9 @@ from hyperspace.kepler import _load_checkpoint
 from hyperspace.rover.checkpoints import CheckpointSaver
 from hyperspace.rover.latin_hypercube_sampler import lhs_start
 
+import sys
 import joblib
+sys.modules['sklearn.externals.joblib'] = joblib
 
 from skopt import gp_minimize
 from skopt import gbrt_minimize
