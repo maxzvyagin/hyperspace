@@ -4,6 +4,8 @@ from hyperspace.kepler import _load_checkpoint
 from hyperspace.rover.checkpoints import CheckpointSaver
 from hyperspace.rover.latin_hypercube_sampler import lhs_start
 
+import joblib
+
 from skopt import gp_minimize
 from skopt import gbrt_minimize
 from skopt import forest_minimize

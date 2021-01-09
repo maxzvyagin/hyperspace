@@ -1,8 +1,9 @@
 import numpy as np
 from math import log, ceil
 
-# from skopt.space import Space
+from skopt.space import Space
 from hyperspace.kepler import create_result
+
 
 
 def hyperband(objective, space, max_iter=100, eta=3, random_state=0,
